@@ -1,24 +1,20 @@
 let cards1 = ["👾","🤡","👺","🐭","🍀","🍉","🚗","☀️","🔥","☂️","🌟","🕶️"]
 let cards2 = ["👾","🤡","👺","🐭","🍀","🍉","🚗","☀️","🔥","☂️","🌟","🕶️"]
 
-let total = cards1.concat(cards2)
+let todaCartas = cards1.concat(cards2)
 
-//ELEMENTOS
-
-let tablero = document.querySelector("#root")
-
-
-function repartir_cartas() {
-
-    total.forEach((cada_carta) => {
-
-        let carta = document.createElement ("div")
-        carta.innerHTML = `<div class="carta">${cada_carta}</div>`;
-
+function repartir_Cartas(){
+    let tablero = document.querySelector("#root")
+    todaCartas.forEach((cada_Carta)=>{
+        let carta = document.createElement("div")
+        carta.classList.add("carta_trasera")
+        carta.innerHTML = `<div class="carta_frontal">${cada_Carta}</div>`;
+        //agrega un elemento hijo a este div, tiene que ser un createElement
         tablero.appendChild(carta)
-    });
-
-
+    })
 }
 
-repartir_cartas()
+
+
+
+repartir_Cartas();
