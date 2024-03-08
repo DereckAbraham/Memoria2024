@@ -11,7 +11,7 @@
     }
 }
 
-    #root{
+    .tablero{
         width: 50rem;
         height: 30rem;
         border-radius: 5px;

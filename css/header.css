@@ -1,0 +1,24 @@
+#header{
+    padding: 0px 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 2.5rem;
+}
+
+.nivel{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.numNivel{
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    justify-content: center;
+}

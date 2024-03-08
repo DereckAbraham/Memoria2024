@@ -1,10 +1,14 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,
-body {
-    font-size: 10px;
+html, body{
     font-family: sans-serif;
+    font-size: 10px;
+}
+
+#root {
+    display: grid;
+    grid-template-rows: 6rem 1fr 6rem;
 }
