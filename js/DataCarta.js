@@ -1,11 +1,22 @@
-export let lista_cartas_nivel = [
-    ["🏎️", "🚗"],
-    ["🏎️", "🚗", "🏍️", "✈️"],
-    ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️"],
-    ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️", "🛺", "🛴"],
-    ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️", "🛺", "🛴", "🍀", "🐭"],
-    ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️", "🛺", "🛴", "🍀", "🐭", "🚍", "🔥"]
+// Datos de cartas por nivel
+export const cartasNivel0 = ["🏎️", "🚗"];
+export const cartasNivel1 = ["🏎️", "🚗", "🏍️", "✈️"];
+export const cartasNivel2 = ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️"];
+export const cartasNivel3 = ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️", "🛺", "🛴"];
+export const cartasNivel4 = ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️", "🛺", "🛴", "🍀", "🐭"];
+export const cartasNivel5 = ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️", "🛺", "🛴", "🍀", "🐭", "🚍", "🔥"];
+
+// Lista de cartas por nivel
+export const lista_cartas_nivel = [
+    cartasNivel0,
+    cartasNivel1,
+    cartasNivel2,
+    cartasNivel3,
+    cartasNivel4,
+    cartasNivel5
 ];
+
+
 
 export let cards1 = ["🏎️", "🚗"];
 export let cards2 = ["🏎️", "🚗"];

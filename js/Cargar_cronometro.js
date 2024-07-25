@@ -1,33 +1,30 @@
 let div_cronometro = document.querySelector(".cronometro");
-
 let tiempo;
+
 function iniciar_cronometro(minutos, segundos) {
-    div_cronometro.innerHTML = `0${minutos}:${segundos}`;
+    div_cronometro.innerHTML = formatTime(minutos, segundos);
 
     function actualizar() {
-        if (segundos == 1 & minutos == 0) {
+        if (segundos === 0 && minutos === 0) {
             clearInterval(tiempo);
-        }
-        segundos--;
+        } else {
+            segundos--;
 
-        // Restar un minuto, segundos = 60
-        if (segundos == 0) {
-            if (minutos >= 1) {
-                segundos = 60
+            if (segundos < 0) {
+                segundos = 59;
                 minutos--;
             }
-        }
 
-        div_cronometro.innerHTML = "";
-
-        if (segundos < 10) {
-            div_cronometro.innerHTML = `0${minutos}:0${segundos}`;
-        }
-        else {
-            div_cronometro.innerHTML = `0${minutos}:${segundos}`;
+            div_cronometro.innerHTML = formatTime(minutos, segundos);
         }
     }
+
     tiempo = setInterval(actualizar, 1000);
+    return tiempo; // Devuelve el intervalo para poder controlarlo desde otros archivos
+}
+
+function formatTime(minutos, segundos) {
+    return `${minutos < 10 ? '0' : ''}${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
 }
 
 export { iniciar_cronometro }
