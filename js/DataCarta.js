@@ -1,13 +1,15 @@
+// DataCarta.js
+
 // Datos de cartas por nivel
-export const cartasNivel0 = ["🏎️", "🚗"];
-export const cartasNivel1 = ["🏎️", "🚗", "🏍️", "✈️"];
-export const cartasNivel2 = ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️"];
-export const cartasNivel3 = ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️", "🛺", "🛴"];
-export const cartasNivel4 = ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️", "🛺", "🛴", "🍀", "🐭"];
-export const cartasNivel5 = ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️", "🛺", "🛴", "🍀", "🐭", "🚍", "🔥"];
+let cartasNivel0 = ["🏎️", "🚗"]; // 2 cartas (1 par)
+let cartasNivel1 = ["🏎️", "🚗", "🏍️", "✈️"]; // 4 cartas (2 pares)
+let cartasNivel2 = ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️"]; // 6 cartas (3 pares)
+let cartasNivel3 = ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️", "🛺", "🛴"]; // 8 cartas (4 pares)
+let cartasNivel4 = ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️", "🛺", "🛴", "🍀", "🐭",]; // 12 cartas (6 pares)
+let cartasNivel5 = ["🏎️", "🚘", "🚒", "🚗", "🏍️", "✈️", "🛺", "🛴", "🍀", "🐭", "🚍"]; // 14 cartas (7 pares)
 
 // Lista de cartas por nivel
-export const lista_cartas_nivel = [
+let lista_cartas_nivel = [
     cartasNivel0,
     cartasNivel1,
     cartasNivel2,
@@ -15,8 +17,6 @@ export const lista_cartas_nivel = [
     cartasNivel4,
     cartasNivel5
 ];
-
-
 
 export let cards1 = ["🏎️", "🚗"];
 export let cards2 = ["🏎️", "🚗"];
@@ -34,3 +34,4 @@ let todas_las_tarjetas = cards1.concat(cards2);
 todas_las_tarjetas.sort(ordenarAleatorio);
 
 export let lista_random = todas_las_tarjetas;
+export { lista_cartas_nivel };

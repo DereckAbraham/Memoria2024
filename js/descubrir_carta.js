@@ -12,7 +12,7 @@ let estado_del_cronometro = false; // Cambiar a booleano para un mejor control
 function iniciarJuego() {
     todas_las_cartas.forEach((cada_div) => {
         cada_div.addEventListener("click", () => {
-            // Asegúrate de que el cronómetro se inicie solo una vez
+
             if (!estado_del_cronometro) {
                 estado_del_cronometro = true;
                 iniciar_cronometro(0, 60);

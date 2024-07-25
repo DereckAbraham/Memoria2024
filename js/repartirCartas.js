@@ -5,7 +5,8 @@ let nivelActual = 0;
 let primeraCarta = null;
 let segundaCarta = null;  
 let tiempo;
-let tiempoInicio; 
+let tiempoInicio;
+
 function construir_nivel(nivel) {
     function ordenarAleatorio(a, b) {
         return Math.random() - 0.5;
@@ -36,7 +37,6 @@ function repartir_cartas(cartas) {
 function manejarClickCarta(event) {
     let carta = event.currentTarget;
 
-   
     if (!carta.classList.contains('descubierta') && !carta.classList.contains('comparando')) {
         carta.classList.add('descubierta'); 
         if (!primeraCarta) {
@@ -46,7 +46,6 @@ function manejarClickCarta(event) {
 
             if (primeraCarta && segundaCarta) {
                 if (primeraCarta.innerHTML === segundaCarta.innerHTML) {
-  
                     primeraCarta = null;
                     segundaCarta = null;
 
@@ -56,7 +55,6 @@ function manejarClickCarta(event) {
                         }, 500); 
                     }
                 } else {
-
                     primeraCarta.classList.add('comparando'); 
                     segundaCarta.classList.add('comparando'); 
                     setTimeout(() => {
@@ -119,7 +117,6 @@ function mostrarModal() {
         }
     }
 }
-
 
 repartir_cartas(construir_nivel(nivelActual));
 tiempo = iniciar_cronometro(1, 0); 
