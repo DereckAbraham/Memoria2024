@@ -9,6 +9,7 @@ export function Actualizar_vidas(restultado){
     if(restultado){
         vidas.forEach((cada_vida) => {
             let div = document.createElement("div");
+            div.classList.add("corazones")
             div.innerHTML = cada_vida;
             div_vidas.appendChild(div);
         });
